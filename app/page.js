@@ -25,10 +25,10 @@ export default function Home() {
   };
   
   const sendMessage = async (message) => {
-    const url = "https://api.openai.com/v1/chat/completions";
+    const url = "/api/chat";
     const headers = {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPENAI_API_KEY}`,
+      Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
     };
     const data = {
       model: "gpt-4",
